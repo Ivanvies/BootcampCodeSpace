@@ -1,0 +1,36 @@
+Algoritmo Ejercicio_11
+	Definir compra, descuento como real;
+	leer compra;
+	
+	Si compra < 500 entonces;
+		escribir " No tiene descuento";
+		escribir " Su precio final es: ", compra;
+	SiNo
+		si compra > 500 Y compra <= 1000 entonces;
+			escribir " Tiene un descuento del 5%: ", compra * 0.05, " euros";
+			descuento = compra * 0.05;
+			escribir " Su precio final es: ", compra - descuento, " euros";
+		SiNo
+			si compra > 1000 y compra <= 7000 entonces;
+				escribir " Tiene un descuento del 10%: ", compra * 0.10, " euros";
+				descuento = compra * 0.10;
+				escribir " Su precio final es: ", compra - descuento, " euros";
+			SiNo
+				si compra > 7000 y compra <= 15000 entonces;
+					escribir " Tiene un descuento del 20%: ", compra * 0.20, " euros";
+					descuento = compra * 0.20;
+					escribir " Su precio final es: ", compra - descuento, " euros";
+				SiNo
+					si compra > 15000 entonces;
+						escribir " Tiene un descuento del 25%: ", compra * 0.25, " euros";
+						descuento = compra * 0.25;
+						escribir " Su precio final es: ", compra - descuento, " euros";
+					FinSi
+					
+				FinSi
+					
+			Finsi
+		FinSi
+	FinSi
+	
+FinAlgoritmo

@@ -1,0 +1,23 @@
+Algoritmo ejecicio_1
+	// primero definimos todas las variables
+	Definir A, B Como Entero
+	Definir C Como Entero
+	
+	//Leemos las que necesitamos.
+	
+	Escribir A 
+	Escribir B
+	
+	// Guardamos A para no perder su valor.
+	aux = A
+	// Sobreescribimos A con el valor de B. 
+	A = B
+	// Ahora sí, recuperamos el valor 
+	//
+	B=C
+	
+	Escribir A, " ", B
+	
+	
+	
+FinAlgoritmo

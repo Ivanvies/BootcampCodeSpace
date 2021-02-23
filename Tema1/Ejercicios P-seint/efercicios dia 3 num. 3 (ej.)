@@ -1,0 +1,13 @@
+Algoritmo ejecicio_2
+	Definir num, num2 Como Entero
+	
+	leer num, num2;
+	
+	Escribir num+num2;
+	Escribir num-num2;
+	escribir num*num2;
+	Escribir num/num2;
+	
+	
+	
+FinAlgoritmo
