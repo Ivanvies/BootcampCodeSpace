@@ -316,12 +316,110 @@ si ponemos lorem5 saldrá un texto con 5 palabras y así las palabras que queram
             <br><br>
 
             <!-- "input number" -->
-            <input type="number" name="ageInput" id="ageInput" value="40" min="0" max="120">
-            <!-- "input fecha" -->
-            <input type="date" name="" id="">
+            <div class="inputBolck">
+                <label for="ageInput">Edad</label>
+                <input type="number" name="ageInput" id="ageInput" value="40" min="0" max="120">
+                <!-- "input fecha" -->
+                <label for="birthdayInpt">Fecha de nacimiento</label>
+                <input type="date" name="birthdayInpt" id="birthdayInput">
+            </div>
+
             <br><br>
 
+            <div class="inputBlock">
+                <label for="carBrandInput">marca de tu coche</label>
+                <input type="text" id="carBrandInput" name="carBrand" list="carBrandList">
+                <!-- Para hacer una lista de datos y dar opciones para seleccionar -->
+                <datalist id="carBrandList">
+                    <option value="BMW">BMW</option>
+                    <option value="MERCEDES">MERCEDES</option>
+                    <option value="FORD">FORD</option>
+                    <option value="VOLKSWAGEN">VOLKSWAGEN</option>
+                    <option value="MUSTANG">MUSTANG</option>
+                </datalist>
+            </div>
+            <br><br>
+
+            <!-- Para crear un cuadro y agrupar un conjunto de campos -->
+            <fieldset disabled>
+                <!-- Para dar un título al bloque lo haremos con "legend" -->
+                <!-- Si quisiéramos desactivar los campos pondríamos "disabled" sería: "<fieldset disabled>" -->
+                <legend>Información de tu pareja</legend>
+                <div class="inputBlock">
+                    <label for="nameInput2"><b>Nombre (*)</b></label> <br> <!-- (con br le damos una nueva línea) -->
+                    <input required type="text" id="nameInput2" name="username" placeholder="Introduce tu nombre">
+                <!-- poniendo el atributo "required" se obliga a no saltarse ese campo -->
+                </div>
+    
+                <!-- "input apellidos" -->
+                <div class="inputBlock">
+                    <label for="LastnameInput2"><b>Apellidos</b></label> <br> <!-- (con br le damos una nueva línea) -->
+                    <input type="text" id="LastnameInput2" name="Lastname" placeholder="Introduce tus apellidos">
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Estado civil</legend>
+                <div>
+                    <!-- "radio" es un círculo que ponemos para seleccionar esa opción -->
+                    <!-- Si ponemos un "input"  y después del "label" saldrá la palabra después del radio en este caso -->
+                    <input type="radio" name="civilState" id="marriedInput">
+                    <label for="marriedInput">Casado</label>
+                </div>
+                <!-- OJO!! no se cambia el "name" ya que sólo se puede enviar uno al servidor -->
+                <!-- se puede el mismo "name" para que sólo se pueda seleccionar uno con distintas opciones dentro de un dato -->
+                <div>
+                    <input type="radio" name="civilState" id="singleInput">
+                    <label for="singleInput">Soltero</label>
+                </div>
+                <!-- Si ponemos "checked" selecciona una opción por defecto, se pone dentro del "Input" -->
+                <div>
+                    <input type="radio" name="civilState" id="divorceInput" required>
+                    <label for="divorceInput">Divorciado</label>
+                </div>
+            </fieldset>
+            <!-- Con "con Input type:"checkbox"" saldrá la opción en forma de casilla para seleccionar con una "v" -->
+            <fieldset>
+                <legend>Productos</legend>
+                <div>
+                    <input type="checkbox" name="iphoneProduct" id="iphoneProduct">
+                    <label for="iphoneProduct">Iphone</label>
+                </div>
+                
+                <div>
+                    <input type="checkbox" name="MacbookProduct" id="MacbookProduct">
+                    <label for="MacbookProduct">Macbook Pro</label>
+                </div>
+               
+                <div>
+                    <input type="checkbox" name="AirpodsProduct" id="AirpodsProduct" required>
+                    <label for="AirpodsProduct">Airpods</label>
+                </div>
+            </fieldset>
+
+            <label for="rangeInput">Seleccione cantidad de elementos</label>
+            <input type="range" name="rangeInput" id="rangeInput">
+
+            <br><br>
+
+            <label for="fuelLevel">Cantidad de gasolina</label>
+            <meter min="0" max="100" id="fuelLevel" value="60"></meter>
+
+            <label for="progressInput">Progreso</label>
+            <progress max="100" value="33" id="progressInput"></progress>
+
+            <br><br>
+
+            <!-- Para subir un ARCHIVO O FOTO -->
+            <label for="fileInput">subir un archivo</label>
+            <input type="file" name="fileInput" id="fileInput">
+
+            <br><br>
+
+
             <input type="submit" value="Guardar">
+            <!-- Con "reset" abrimos un botón para resetear toda la información -->
+            <input type="reset" value="vaciar">
 
         </form>
 
