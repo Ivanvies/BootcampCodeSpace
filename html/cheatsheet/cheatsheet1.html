@@ -11,7 +11,7 @@
 <body>
     <!-- Enlaces externos, el target="_blank" es para que tu página se quede abierta -->
     <a href="https://www.google.com" target="_blank">Ir a google</a>
-    <!-- enlace interno,si está dentro de una carpeta -folder- poner el nombre y / -->
+    <!-- enlace interno, no tiene que tener https, si está dentro de una carpeta -folder- poner el nombre y / -->
     <a href="blog.html">blog</a>
 
     <!-- para poner línea en blanco -->
@@ -134,7 +134,6 @@
         <!-- "Menús laterales" <aside> es de sentido semántico para poner meńus laterales en las secciónes -->
         <!-- bloque para barras laterales, se suele utilizar para ej. últimas noticias o información -->
 
-        <aside>
             <p><b>Menú generlamente lateral</b></p>
         </aside>
 
@@ -146,9 +145,10 @@
             </address>
         </footer>
 
-        <!-- GENÉRICO-es el contenedor genérico para agrupar elementos consecutivos
+        <!-- GENÉRICO-es el contenedor genérico más importante para agrupar elementos consecutivos y colocarlos donde queramos
     si ponemos un . ejemplo: .container, nos pone directamente div en la class)
     ej.(.container) -->
+    <!-- si ponemos . nos crea una etiqueta <div> classe</div> -->
         <div class="contaneir" style="background-color:crimson">
             <p>("div")Contenedor Genérico para agrupar elementos</p>
 
@@ -167,7 +167,6 @@
         <!-- LISTAS / LISTS (li)
     se utilizan para los enlaces y para darle un orden
     Dos tipos: Ordenadas (te enumera las listas) y Desordenas ()
-
     Desordenada -->
         <ul>
             <li>Elemento 1</li>
@@ -232,6 +231,9 @@
 
             <tbody>
                 <tr>
+                    <!-- en los td se puede poner al principio un th para que podamos poner un identificador
+                    como por ejemplo númerico, sería:
+                    (<th>1</th>) -->
                     <td>John Doe</td>
                     <td>jdoe@gmail.com</td>
                     <td></td>
@@ -271,15 +273,20 @@
         <!-- si no le ponemos el enlace de "label" no reconoce que ese input pertenece en este caso al enlace NOMBRE -->
 
         <form action="" method="get">
+            <!-- En action sería la petición a un enlace que tengamos en backend sería una URL, se le da "form get" en método en un get porque envío toda la información para una petición. -->
             <!-- el "placeholder" sirve para decirle al usuario en el recuadro donde hay que poner la información o datos -->
             <!-- "id" es un identificador que utilizaremos nosotros (el id nunca se puede repetir) y  -->
             <!-- "name" es el nombre que le damos a ese dato que vamos a enviar para que el Servidor lo reconozca.(el name sí se puede repetir) -->
             <!-- "Input nombre" -->
             <div class="inputBlock">
                 <!-- "class=" de momento se utilizarán en CSS y Javascript -->
-                <label for="nameInput"><b>Nombre</b></label> <br> <!-- (con br le damos una nueva línea) -->
-                <input required type="text" id="nameInput" name="username" placeholder="Introduce tu nombre">
+                <label for="nameInput"><b>Nombre (*)</b></label> <br> <!-- (con br le damos una nueva línea) -->
+                <!-- un input es una entrada de texto, password, email, número, imgaen, etc..,(hay varios tipos de input) en general aparecerá como una pequeña etiqueta o recuadro -->
+                <!-- siempre irá con la etiqueta "label" que será el dato que queramos que introduzcan. -->
+                <input required type="text" id="nameInput" name="username" maxlength="10" placeholder="Introduce tu nombre">
                 <!-- poniendo el atributo "required" se obliga a no saltarse ese campo -->
+                <!-- dento de input al final con "value" se puede rellenar lo que nosotros queramos que aparezca dentro del recuadro. -->
+                <!-- el atributo maxlength es para darle un máximo de carácteres. -->
             </div>
 
             <!-- "input apellidos" -->
@@ -306,25 +313,26 @@
                 <textarea name="messageInput" id="messageInput" cols="30" rows="10"></textarea>
             </div>
             <!-- Hay un atributo el "maxlength" para poder limitar la cantidad de caracteres para introducir en un input -->
-
-            <!-- Un desplegabla para meter que se elija una opción con "option" -->
+            <!-- Un desplegable para meter que se elija una opción con "option" -->
             <div class="inputBlock">
                 <label for="sexInput">Género</label><br>
                 <select name="sexInput" id="sexInput">
                     <option value="" hidden></option>
                     <!-- con "hidden" oculta las opciones -->
                     <option value="female">Femenino</option>
-                    <option value="male">Masculina</option>
+                    <option value="male">Masculino</option>
                     <option value="other">Otro</option>
                 </select>
+                <!-- con "disabled" no deja seleccionar -->
             </div>
             <br><br>
 
-            <!-- "input number" -->
+            <!-- "input TIPO NUMBER" para poner números -->
             <div class="inputBolck">
                 <label for="ageInput">Edad</label>
                 <input type="number" name="ageInput" id="ageInput" value="40" min="0" max="120">
-                <!-- "input fecha" -->
+                
+                <!-- "input FECHAS" -->
                 <label for="birthdayInpt">Fecha de nacimiento</label>
                 <input type="date" name="birthdayInpt" id="birthdayInput">
             </div>
@@ -334,7 +342,8 @@
             <div class="inputBlock">
                 <label for="carBrandInput">marca de tu coche</label>
                 <input type="text" id="carBrandInput" name="carBrand" list="carBrandList">
-                <!-- Para hacer una lista de datos y dar opciones para seleccionar -->
+                <!-- Para hacer una lista de datos y dar opciones para seleccionar, Nota: no sale lista de opciones,
+                sino que al poner una letra apareceŕa las opcines que hayamos introducido -->
                 <datalist id="carBrandList">
                     <option value="BMW">BMW</option>
                     <option value="MERCEDES">MERCEDES</option>
@@ -394,7 +403,7 @@
                 <div>
                     <input type="checkbox" name="MacbookProduct" id="MacbookProduct">
                     <label for="MacbookProduct">Macbook Pro</label>
-                </div>
+                </div>    
 
                 <div>
                     <input type="checkbox" name="AirpodsProduct" id="AirpodsProduct" required>
@@ -420,10 +429,17 @@
             <input type="file" name="fileInput" id="fileInput">
 
             <br><br>
+            <!-- "GUARDAR" FORMULARIO Y ENVIARLO
 
+            crear un botón para guardar y ejecutar la acción, llevará al atributo "action" que tendremos que poner
+            la URL don queramos enviarlo. -->
+            <!-- SE CREA SIEMPRE DENTRO DEL <form>  -->
             <input type="submit" value="Guardar">
+
             <!-- Con "reset" abrimos un botón para resetear toda la información -->
             <input type="reset" value="vaciar">
+            <!-- Para rellenar CAMPOS OBLIGATORIOS se pon un atributo después del input -->
+            
         </form>
 
         <br><br>
