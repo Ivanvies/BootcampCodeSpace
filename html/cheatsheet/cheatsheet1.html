@@ -283,6 +283,7 @@
                 <label for="nameInput"><b>Nombre (*)</b></label> <br> <!-- (con br le damos una nueva línea) -->
                 <!-- un input es una entrada de texto, password, email, número, imgaen, etc..,(hay varios tipos de input) en general aparecerá como una pequeña etiqueta o recuadro -->
                 <!-- siempre irá con la etiqueta "label" que será el dato que queramos que introduzcan. -->
+                <!-- REQUIRED poniéndolo en un input no hace falta ponerlo en todos ya que al GUARDAR si no se ha puesto nada en esa casilla no te dejará -->
                 <input required type="text" id="nameInput" name="username" maxlength="10" placeholder="Introduce tu nombre">
                 <!-- poniendo el atributo "required" se obliga a no saltarse ese campo -->
                 <!-- dento de input al final con "value" se puede rellenar lo que nosotros queramos que aparezca dentro del recuadro. -->
@@ -338,12 +339,14 @@
             </div>
 
             <br><br>
-
+            
+                <!-- CREAR LISTA DE DATOS con opciones al meter una letra -->
             <div class="inputBlock">
                 <label for="carBrandInput">marca de tu coche</label>
                 <input type="text" id="carBrandInput" name="carBrand" list="carBrandList">
-                <!-- Para hacer una lista de datos y dar opciones para seleccionar, Nota: no sale lista de opciones,
-                sino que al poner una letra apareceŕa las opcines que hayamos introducido -->
+                <!-- Para hacer una lista de datos y dar opciones para seleccionar (ayuda), Nota: no sale lista de opciones,
+                sino que al poner una letra aparecerá las opcines que hayamos introducido -->
+                <!-- En el "id" de datalist se le pone el mismo nombre que en "list" de input para asociarlo -->
                 <datalist id="carBrandList">
                     <option value="BMW">BMW</option>
                     <option value="MERCEDES">MERCEDES</option>
@@ -354,8 +357,9 @@
             </div>
             <br><br>
 
-            <!-- Para crear un cuadro y agrupar un conjunto de campos -->
+            <!-- Para CREAR UN CUADRO Y AGRUPAR UN CONJUNTO DE CAMPS -->
             <fieldset disabled>
+                <!-- "DISABLED" para desactivar los campos enteros, si lo ponemos en el "fieldset" desactivamos todos los campos -->
                 <!-- Para dar un título al bloque lo haremos con "legend" -->
                 <!-- Si quisiéramos desactivar los campos pondríamos "disabled" sería: "<fieldset disabled>" -->
                 <legend>Información de tu pareja</legend>
@@ -386,13 +390,13 @@
                     <input type="radio" name="civilState" id="singleInput">
                     <label for="singleInput">Soltero</label>
                 </div>
-                <!-- Si ponemos "checked" selecciona una opción por defecto, se pone dentro del "Input" -->
+                <!-- Si ponemos "checked" en el input al final selecciona una opción por defecto, se pone dentro del "Input" -->
                 <div>
                     <input type="radio" name="civilState" id="divorceInput" required>
                     <label for="divorceInput">Divorciado</label>
                 </div>
             </fieldset>
-            <!-- Con "con Input type:"checkbox"" saldrá la opción en forma de casilla para seleccionar con una "v" -->
+            <!-- Con "con Input type:"CHECKBOX" saldrá la opción en forma de casilla para seleccionar con una "v" -->
             <fieldset>
                 <legend>Productos</legend>
                 <div>
@@ -416,6 +420,7 @@
 
             <br><br>
 
+            <!-- MEDIDORES (BARRAS) -->
             <label for="fuelLevel">Cantidad de gasolina</label>
             <meter min="0" max="100" id="fuelLevel" value="60"></meter>
 
@@ -425,18 +430,19 @@
             <br><br>
 
             <!-- Para subir un ARCHIVO O FOTO -->
+            <!-- si ponemos al final "value=test" te pone que hay que seleccionar un archivo .txt -->
             <label for="fileInput">subir un archivo</label>
             <input type="file" name="fileInput" id="fileInput">
 
             <br><br>
             <!-- "GUARDAR" FORMULARIO Y ENVIARLO
 
-            crear un botón para guardar y ejecutar la acción, llevará al atributo "action" que tendremos que poner
+            crear un botón para GUARDAR Y EJECUTAR la acción, llevará al atributo "action" que tendremos que poner
             la URL don queramos enviarlo. -->
             <!-- SE CREA SIEMPRE DENTRO DEL <form>  -->
             <input type="submit" value="Guardar">
 
-            <!-- Con "reset" abrimos un botón para resetear toda la información -->
+            <!-- Con "RESET" abrimos un botón para resetear toda la información -->
             <input type="reset" value="vaciar">
             <!-- Para rellenar CAMPOS OBLIGATORIOS se pon un atributo después del input -->
             
@@ -445,15 +451,19 @@
         <br><br>
 
         <!-- Multimedia / Media -->
+
+        <!-- Tened la imagen en la misma carpeta donde estemos realizando la programación o servidor, en este caso hemos creado una carpeta "imagenes" -->
         <img src="imagenes/paisajemontaña.jpeg" width="500" alt="atardecer estrellada">
 
-        <!-- Se puede meter un enlace directamente por ejemplo desde youtube -->
+        <!-- Se puede meter un enlace directamente por ejemplo desde youtube, si tuviéramos que poner un vídeo ajeno a youtube tendríamos que descargarlo -->
         <!-- Podemos poner ancho y alto con "width" y "height" -->
         <!-- el "iframe" es un contenido incrustrado, anidado. -->
         <iframe width="560" height="315" src="https://www.youtube.com/embed/OgIRAjnnJzI?controls=0"
             title="YouTube video player" frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen></iframe>
+            allowfullscreen>
+        </iframe>
+
         <iframe width="560" height="315" src="https://www.marca.com" frameborder="0"></iframe>
 
         <!-- meter "PDF" con "iframe" al poner ancho y alto debemos de poner "px" ej.- "500px"-->
@@ -463,15 +473,21 @@
 
         <!-- Hay otro elemento que es "object" es un recurso externo, puede ser un plugin que no requiera algo visual como el "iframe" -->
         <!-- si tiene sentido lo incrusta y si no, lo procesará o ejecutará sin incrustarlo.
-    sería como date y en "type" le pondremos "aplication/ y el archivo correspondiente eje. /pdf" -->
+        sería como date y en "type" le pondremos "aplication/ y el archivo correspondiente eje. /pdf" -->
         <!-- *No es muy común porque al poner un plugin lo haremos con otro elemento. -->
         <object
             data="http://www.juntadeandalucia.es/empleo/recursos/material_didactico/especialidades/materialdidactico_tic_linux_basico/manuales/tema1.pdf"
-            type="aplication/pdf"></object>
+            type="aplication/pdf">
+        </object>
 
-        <!-- CITAS / QUOLATIONS -->
+        <br><br>
+        <!-- PONER UN "BOTÓN" -->
+        <BUtton>Click</BUtton>
+
+        <!-- CITAS / QUOLATIONS - citar algún tipo de texto -->
         <h3>Citas / Quolations</h3>
-
+                 
+        <!--REPASO: creamos un ej. lorem150 para introducir un texto y para igualar botón drcho. del ratón y le damos Format text -->
         <blockquote>
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur, expedita odio. Officia, est iste soluta
         facere qui unde nulla sapiente omnis placeat vitae dolor adipisci corrupti eum facilis voluptatibus corporis
@@ -486,28 +502,53 @@
         expedita, nostrum modi! Quae voluptatum quia dolor.
         </blockquote>
 
-        <!-- En el caso de citas más corto no como en bloque  -->
+        <!-- En el caso de citas / quo de texto más corto no como en bloque  -->
+        <!-- NOTA: saldrá el texto entre comillas. -->
         <q>Soy programador</q>
+        <br><br>
+        <!-- Si a continuación del "q" ponemos el elemento "abbr" podremos poner una abreviatura en el cual al poner el ratón encima saldrá el texto 
+        que significa dicha abreviatura -->
+        <q>Soy programador. <abbr title="Formació profesinal">FP</abbr></q>
 
         <br><br>
         <!-- Para poner un botón en cualquier apartado -->
         <button>click</button>
 
 
-        <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+        <br><br><br>
 
         <!-- Para meter un texto de forma rápida en una etiqueta: -->
         <!-- Seleccionamos con todo incluído, presionamos la tecla F1, ponemos >wrap,
-    y en la barra escribimos el elemento o etiqueta que queramos. -->
+        y en la barra escribimos el elemento o etiqueta que queramos. -->
 
+        <!-- SCRIPTING -->
 
+        <!-- ES ETIQUETA JAVASCRIPT siempre estará dentro del "body" y abajo del todo -->
+        <!-- para que coja la página entera sino nos saldría que no existe -->
+        <!-- utilazaremos el "script src" para poner un enlace de archivo JAVASCRIPT -->
+        <script>document.write("Escribiendo esto desde JS.")</script>
+        
+        <!-- Si el navegador donde estamos funciona solo con Javascript en el caso de no navegar, con
+        "noscript" nos AVISA que podemos tener problemas en esa página, se le puede poner un texto. -->
+        <noscript>Error. Tu navegador no soporta Javascript</noscript>
 
+        <!-- Si desactivamos Javascript en nuestro navegador en about:config saldrá el mensaje que hayamos puesto -->
+        <!-- en "noscript" -->
 
+        <br><br>
 
-
-
-
-
+        <!-- PARA PONER ESPACIOS ENTRE carácteres
+        REPRESENTACIÓN DE carácteres "&.."-->
+        a&nbsp;&nbsp; &#62;b
+        
+        <br>
+        <!-- Para poner un carácter en texto y no crear conflicto en el programa HTML se crea con la etiqueta "&" -->
+        a&nbsp;&nbsp; &#60;!-- Scripting --&#62;
+        
+        OTRO CARÁCTER MUY COMÚN el típico C de copyright
+        &copy;
 
 </body>
 
