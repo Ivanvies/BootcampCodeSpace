@@ -1,25 +1,70 @@
 <!DOCTYPE html>
+
+<!-- SESIÓN 17 -->
+
+<!-- (tipo de documento) DOCTYPE -->
 <html lang="en">
+<!-- la cabecera "head" está englobado todos los metadatos de la página web (NO se muestra en la web) -->
 
 <head>
+       <!-- METADATOS / METADATA (sesión 20 - 3h 46')
+    "charset" para ver el tipo de carácter del documento. -->
+    <!-- "charset" significa juego de carácteres. -->
     <meta charset="UTF-8">
-    <meta http_equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Para ver la compatibilidad del documento -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Para ver según el tipo del dispositivo (móvil, ordenador, etc...) -->
+     <!-- "viewport" (ventana gráfica), "device-width" (adaptarse al ancho de contenido, ej. un navegador). -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- UN META para que nos vean los buscadores qué es lo queremos que aparezca,
+    exclusivamente en la descripción "content" -->
+    <meta name="description" content="Academia de software, ciberseguridad">
+    <!-- se puede poner también el autor del programador, etc...  -->
+    <meta name="author" content="codespace">
+    <!-- decirle a los robots que no indexe el contenido -->
+    <meta name="robots" content="noindex">
+    <!-- Comportamiento por defecto -->
+    <meta name="robots" content="index"> 
+
+    <!-- Para no procesar los enlaces url que tienes en esa web (href) -->
+    <meta name="robots" content="nofollow">
+    <!-- Comportamiento por defecto -->
+    <meta name="robots" content="follow"> 
+
+    <!-- Controlar caché de este documento -->
+    <meta http-equiv="cache-control" content="no-cache">
+
+    <!-- Redirigir a otro documento (diciéndole los segundos para dirigir "content="10...") -->
+    
+    <!-- <meta http-equiv="refresh" content="10; url=http://google.com"> -->
+
+
+    <style></style>
+    <!-- Se puede poner "script" en "head" cuando no tenga que ver con el Dom -->
+    <script></script> 
+
+    <!-- Título del documento -->
     <title>cheatsheet1</title>
+    <!-- "title" siempre lo tenemos que poner nosotros, los "meta" NO, los esenciales, pero se puede poner para otras opciones  -->
 </head>
+
+<!-- "body" será todo los datos visuales en la página web. -->
 
 <body>
     <!-- Enlaces externos, el target="_blank" es para que tu página se quede abierta -->
+
     <a href="https://www.google.com" target="_blank">Ir a google</a>
+
     <!-- enlace interno, no tiene que tener https, si está dentro de una carpeta -folder- poner el nombre y / -->
+
     <a href="blog.html">blog</a>
+    <!-- El archivo "blog" hay que crearlo igual (ya que no va a un servidor, sino un archivo interno), un DOCTYPE con "!"
+         y crear otro enlace con "a" para volver a la página principal  -->
 
     <!-- para poner línea en blanco -->
     <br>
     <!-- para poner varios espacios se repite br -->
     <br><br><br><br>
-
-    <a href="blog.html">blog</a>
 
     <!-- es una línea separadora hr -->
     <hr>
@@ -33,32 +78,27 @@
     <h+>Título 6</h6>
         <!-- en h+ el título no es negrita -->
         <!-- son todos los títulos que vamos a tener -->
-
-        <hr>
+    <hr>
 
         <!-- Textos / Párrafos de tipo bloque / Paragraphs -->
-        <p>Esto es un párrafo</p>
-        <!-- si ponemos lorem ipsum sale un texto para rellenar
-    si ponemos lorem5 saldrá un texto con 5 palabras y así las palabras que queramos introducir -->
-        <p>
-            Lorem ipsum, dolor sit amet <b>adipisicing elit</b>. Necessitatibus sunt labore suscipit perferendis
-            facere quasi quod! Voluptas excepturi eos reiciendis dolorem amet, unde nulla distinctio. Assumenda
-            distinctio <strong>voluptate eveniet ullam r
-                ecusandae</strong> omnis nesciunt <em>modi provident aspernatur</em> , perferendis estrepellat vel at
-            cupiditate, <s>alias ipsam porro rerum unde!</s> Saepe, quos error. ipsum dolor sit amet.(lorem5
-            crea el texto de 5 palabras)
-            <!-- si pulsamos en el texto botón drcho. y format document, nos crea el texto en un párrafo con ancho, para que no salga en un línea -->
-            <!-- ELEMENTOS -->
-            <!-- <b></b>si ponemos un texto, frase o palabra dentro de "b" saldrá en negrita pero el navegador no le da importancia a esa frase.
-        <strong></strong>también lo pondrá en negrita pero el navegador o motor de búsqueda lo tiene como algo importante. -->
-            <!-- <em></em> nos saldrá las palabras en cursiva -->
-            <!-- <s></s>para tachar, se suele utilizar en artículos que ya no es verdad o que ya no vale (ej. comandos) -->
-
-
-
-        </p>
-        <!-- poniendo el <pre></pre>te respeta la forma del párrafo que le damos, espacios, etc... -->
-        <pre>
+    <p>Esto es un párrafo</p>
+        <!-- si ponemos lorem ipsum sale un texto para rellenar -->            <!-- si ponemos lorem5 saldrá un texto con 5 palabras y así las palabras que queramos introducir -->
+    <p>
+        Lorem ipsum, dolor sit amet <b>adipisicing elit</b>. Necessitatibus sunt labore suscipit perferendis
+        facere quasi quod! Voluptas excepturi eos reiciendis dolorem amet, unde nulla distinctio. Assumenda
+        distinctio <strong>voluptate eveniet ullam r
+          ecusandae</strong> omnis nesciunt <em>modi provident aspernatur</em> , perferendis estrepellat vel at
+        cupiditate, <s>alias ipsam porro rerum unde!</s> Saepe, quos error. ipsum dolor sit amet.(lorem5
+        crea el texto de 5 palabras)
+        <!-- si pulsamos en el texto botón drcho. y format document, nos crea el texto en un párrafo con ancho, para que no salga en un línea -->
+        <!-- ELEMENTOS -->
+        <!-- "<b></b>" si ponemos un texto, frase o palabra dentro de "b" saldrá en negrita pero el navegador no le da importancia a esa frase.
+        "<strong></strong>" también lo pondrá en negrita pero el navegador o motor de búsqueda lo tiene como algo importante. -->
+        <!-- "<em></em>"" nos saldrá las palabras en cursiva -->
+        <!-- "<s></s>" para tachar, se suele utilizar en artículos que ya no es verdad o que ya no vale (ej. comandos) -->
+    </p>
+        <!-- poniendo el "<pre></pre>" te respeta la forma del párrafo que le damos, espacios, etc... -->
+    <pre>
         Lorem ipsum, dolor sit amet <b>adipisicing elit</b>. Necessitatibus sunt labore suscipit perferendis
         facere quasi quod! Voluptas 
         
@@ -72,139 +112,159 @@
         <!-- si pulsamos en el texto botón drcho. y format document, nos crea el texto en un párrafo con ancho, para que no salga en un línea -->
         <!-- <b></b>si ponemos un texto, frase o palabra dentro de "b" saldrá en negrita pero el navegador no le da importancia a esa frase.
         <strong></strong>también lo pondrá en negrita pero el navegador o motor de búsqueda lo tiene como algo importante. -->
-    </pre>
+     </pre>
 
-        <p>
-            ELEMENTOS
-            <!-- <span></span>para englobar un texto y posterior darle un id= o un atributo para darle una referencia (cambiar tamaño, tipografía, color, negrita, o identifique) -->
-            <!-- un id= es un identificador único
+    <p>
+        ELEMENTOS
+        <!-- "<span></span>" para englobar un texto y posterior darle un id= o un atributo para darle una referencia (cambiar tamaño, tipografía, color, negrita, o identifique) -->
+        <!-- un id= es un identificador único
         class= se puede compartir a varios elementos de identificación -->
+        <span id="ingredients">ipsum dolor sit amet consectetur</span> , adipisicing elit. Blanditiis architecto
+        <!-- Identifico la etiqueta id "ingredientes" y puedo cambiar tanto la tipografía, color, etc...  -->
+        <span class="ingredients">atque adipisci, iusto</span>
+    </p>
 
-            <span id="ingredients">ipsum dolor sit amet consectetur</span> , adipisicing elit. Blanditiis architecto
-            <span class="ingredients">atque adipisci, iusto</span>
-        </p>
+    <p><strong>FÓRMULAS</strong> <b>(cómo realizarlas)</b></p>
 
-        <p><strong>FÓRMULAS</strong> <b>(cómo realizarlas)</b></p>
+    <!-- Para realizar fórmulas, subíndice y subperíndice  -->
+    <p>
+        la molécula preferida casi cualquier desarrollador es
+        C<sub>8</sub>H<sub>10</sub>N<sub>4</sub>O<sub>2</sub>
+    </p>
 
-        <p>
-            <!-- Para realizar fórmulas, subíndice y subperíndice  -->
-            la molécula preferida casi cualquier desarrollador es
-            C<sub>8</sub>H<sub>10</sub>N<sub>4</sub>O<sub>2</sub>
-        </p>
+    <p>El teorema de pitágoras se conoce por la ecuación de:</p>
+    <p><var>a</var><sup>2</sup> + <var>b</var><sup>2</sup> = <var>c</var><sup>2</sup></p>
 
-        <p>El teorema de pitágoras se conoce por la ecuación de:</p>
-        <p><var>a</var><sup>2</sup> + <var>b</var><sup>2</sup> = <var>c</var><sup>2</sup></p>
+    <!-- Para englobar un párrafo o varios y darle un elemento, ej.<nav>, <div>, <etc...
+    Primero seleccionamos, segundo pulsamos F1 (saldrá todos los comandos), tercero escribimos el comando "wrap",
+    y ponemos el elemento que queramos dar -->
 
-        <p>las clases de bootcamp empiezan a las <time datetime="9:30">9:30</time></p>
+        <!-- FECHA Y HORA -->
 
-        <p>El primer día fue el <time datetime="2021-02-01">1 de febrero</time></p>
+    <p>las clases de bootcamp empiezan a las <time datetime="9:30">9:30</time></p>
 
-
+    <p>El primer día fue el <time datetime="2021-02-01">1 de febrero</time></p>
 
         <!-- "br" línea en blanco, "hr" línea separadora     -->
-        <br>
-        <hr><br>
+    <br>
+    <hr><br>
 
-        <!-- Contenedores / Containers
-        (para hacerlo comentario rápido Ctrol+shift+7) -->
-        <!-- <nav> para la barra de navegación -->
+        <!-- Contenedores / Containers (Sesión 18 - 1 h 14')
+    
+    (para hacerlo comentario rápido Ctrol+shift+7) -->
+    <!-- <nav> para la barra de navegación -->
 
-        <!-- para ponerlo todo junto se pone nav.(el punto es para poner <class>)texto>(símbolo mayor que)
+    <!-- para ponerlo todo junto se pone nav.(el punto es para poner "<class>)texto>(símbolo mayor que)
     a (para abrir un enlace)*3 (* para poner tantos enlaces que queramos){texto $(para poner índices(Enlace 1, enlace 2, etc..))} -->
-        <!-- EJEMPLO: nav.lectura>a*3{Enlace $} -->
-        <nav class="Lectura">
-            <a href="">Enlace 1</a>
-            <a href="">Enlace 2</a>
-            <a href="">Enlace 3</a>
-        </nav>
+    <!-- EJEMPLO: nav.lectura>a*3{Enlace $} -->
 
-        <!-- Una sección puede tener dentro un artículo con su título (h1), párrafo (p) -->
-        <!-- si ponemos todo seguido en la misma línea nos creará lo mismo de la siguiente manera: -->
-        <!-- section>article>h1+p (colocar el + para crear los elementos en el mismo nivel) -->
-        <!-- y si ponemos h1{Titulo} y p{contenido} nos lo pone directamente -->
+    <!-- para que haya un elemente dentro de otro elemento se pone ">" -->
+    <nav class="Lectura">
+        <a href="">Enlace 1</a>
+        <a href="">Enlace 2</a>
+        <a href="">Enlace 3</a>
+    </nav>
 
-        <section>
-            <article>
-                <h1>Título del artículo</h1>
-                <p>Contenido del artículo</p>
-            </article>
-            <a href="">leer más</a>
-        </section>
+    <!-- Una sección puede tener dentro un artículo con su título (h1), párrafo (p) -->
+    <!-- si ponemos todo seguido en la misma línea nos creará lo mismo de la siguiente manera: -->
+    <!-- section>article>h1+p (colocar el + para crear los elementos en el mismo nivel) -->
+    <!-- y si ponemos h1{Titulo} y p{contenido} nos lo pone directamente -->
+
+    <section>
+        <article>
+            <h1>Título del artículo</h1>
+            <p>Contenido del artículo</p>
+        </article>
+        <a href="">leer más</a>
+    </section>
 
         <!-- "Menús laterales" <aside> es de sentido semántico para poner meńus laterales en las secciónes -->
         <!-- bloque para barras laterales, se suele utilizar para ej. últimas noticias o información -->
-
-            <p><b>Menú generlamente lateral</b></p>
-        </aside>
+    <aside>
+        <p><b>Menú generalmente lateral</b></p>
+    </aside>
 
         <!-- PIE DE PÁGINA -FOOTER- en general siempre estará abajo -->
-        <footer>
-            <p>Pie de página</p>
-            <address>
-                Málaga, 29007
-            </address>
-        </footer>
+    <footer>
+        <p>Pie de página</p>
+        <address>
+            Málaga, 29007
+        </address>
+    </footer>
 
         <!-- GENÉRICO-es el contenedor genérico más importante para agrupar elementos consecutivos y colocarlos donde queramos
     si ponemos un . ejemplo: .container, nos pone directamente div en la class)
     ej.(.container) -->
-    <!-- si ponemos . nos crea una etiqueta <div> classe</div> -->
-        <div class="contaneir" style="background-color:crimson">
-            <p>("div")Contenedor Genérico para agrupar elementos</p>
+        <!-- si ponemos . nos crea una etiqueta <div> classe</div> -->
+    <div class="contaneir" style="background-color:crimson">
+        <p>("div")Contenedor Genérico para agrupar elementos</p>
 
-        </div>
+    </div>
 
         <!-- PARA CREAR FONDOS -->
-        <div class="contaneir" style="background-color: darkgoldenrod;">
-            <P><b>PARA CREAR FONDOS DE COLORES</b></P>
-            <!-- se pone .(que es class)container luego seguido style y elegimos la opción background-color -->
-        </div>
+    <div class="contaneir" style="background-color: darkgoldenrod;">
+        <P><b>PARA CREAR FONDOS DE COLORES</b></P>
+        <!-- se pone .(que es class)container luego seguido style y elegimos la opción background-color -->
+    </div>
 
-        <br>
-        <hr><br>
+    <br>
+    <hr><br>
 
-        <p><b>LISTAS / LISTS (li)</b></p>
+    <p><b>LISTAS / LISTS (li)</b></p>
         <!-- LISTAS / LISTS (li)
     se utilizan para los enlaces y para darle un orden
-    Dos tipos: Ordenadas (te enumera las listas) y Desordenas ()
-    Desordenada -->
-        <ul>
-            <li>Elemento 1</li>
-            <li>Elemento 2</li>
-            <li>Elemento 3</li>
-            <li>Elemento 4</li>
-            <li>Elemento 5</li>
-        </ul>
+    Dos tipos: Ordenadas (te enumera las listas) y Desordenas
 
-        <!-- Ordenadas -->
+            "Desordenada" -->
+        <!-- ul>li*5{Elemento $} -->
+    <ul>
+        <li>Elemento 1</li>
+        <li>Elemento 2</li>
+        <li>Elemento 3</li>
+        <li>Elemento 4</li>
+        <li>Elemento 5</li>
+    </ul>
+    <ul>
+        <li>Elemento
+            <ul>
+                <li>Elemento</li>
+                <li>Elemento
+                    <ul>
+                        <li>Elemento</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
+        <!-- "Ordenadas" -->
         <!-- con ol te enumera cada texto -->
-        <ol>
-            <li>Elemento</li>
-            <li>Elemento</li>
-            <li>Elemento</li>
-            <li>Elemento</li>
-            <li>Elemento</li>
-        </ol>
-        dentro del elemento (ol) se puede poner un atributo (start) para que empiece a enumerar desde donde quieras
-        <p>NOTA: siempre cerrar después de las comillas con ></p>
+    <ol>
+        <li>Elemento</li>
+        <li>Elemento</li>
+        <li>Elemento</li>
+        <li>Elemento</li>
+        <li>Elemento</li>
+    </ol>
+    dentro del elemento (ol) se puede poner un atributo (start) para que empiece a enumerar desde donde quieras
+    <p>NOTA: siempre cerrar después de las comillas con ></p>
 
-        <ol start="500">
+    <ol start="500">
 
-            <li>Elemento</li>
-            <li>Elemento
-                <!-- (Dentro de un elemento hacer otra lista ordenada) -->
-                <ol>
-                    <li>Elemento</li>
-                    <li>Elemento</li>
-                </ol>
-            </li>
-            <li>Elemento</li>
-            <li>Elemento</li>
-            <li>Elemento</li>
-        </ol>
+        <li>Elemento</li>
+        <li>Elemento
+            <!-- (Dentro de un elemento hacer otra lista ordenada) -->
+            <ol>
+                <li>Elemento</li>
+                <li>Elemento</li>
+            </ol>
+        </li>
+        <li>Elemento</li>
+        <li>Elemento</li>
+        <li>Elemento</li>
+    </ol>
 
-        <br>
-        <hr><br>
+    <br>
+    <hr><br>
 
         TABLAS / TABLES
 
@@ -214,341 +274,365 @@
     Dentro de esta etiqueta los elementos que le atribuyamos serán poniéndoles una t antes
     ej. thead, tbody, tfoot (en vez de footer)
 
+    Para poner un título a una tabla antes de la cabecera "thead" se pone el elmento "<caption>"
+
     Para presentar una fila de celdas en la tabla sería "tr" -->
+
+    <br><br>
+
+    <table>
+        <thead>
+            <!-- Fila de celdas en la tabla -->
+             <tr>
+                <!-- con th se describen qué van a ser esas columnas (lo pondrá en negrita por defecto). ej. -->
+                <th>#</th>
+                <th>Nombre</th>
+                <th>Email</th>
+                <th>Edad</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <!-- en los td se puede poner al principio un th para que podamos poner un identificador
+                como por ejemplo númerico, sería:
+                (<th>1</th>) -->
+                <th>1</th>
+                <!-- Para enumerar y buscar como título se pone "th" y al mismo tiempo te lo pondrá en negrita. -->
+                <td>John Doe</td>
+                <td>jdoe@gmail.com</td>
+                <td></td>
+            </tr>
+            <!-- Tiene que coincidir los datos de la cabecera "th" con los del cuerpo "td"
+            Si queremos añadir otro nombre habrá que crear otro "tr" en el cuerpo "tbody" -->
+            <!-- Si no queremos poner un dato, dejad el td vacío (<td></td>) -->
+            <tr>
+                <th>2</th>
+                <td>Jane Doe</td>
+                <td>janedoe@gmail.com</td>
+                <td>32</td>
+            </tr>
+            <tr>
+                <th>3</th>
+                <td>Alumnos Codespace</td>
+                <td>ac@codespaceacademy.com</td>
+                <td>40</td>
+            </tr>
+
+            <!-- "tr" es la FILA -->
+            <!-- "td" es la CELDA -->
+        </tbody>
+            <!-- Cuando la tabla es grande se puede poner un pie de página -->
+        <tfoot>
+            <tr>
+                <th>Nombre</th>
+                <th>Email</th>
+                <th>Edad</th>
+            </tr>
+        </tfoot>
+
+    </table>
+
+    <br><hr><br>
+        <!-- FORMULARIOS / FORMS -->
+
+    <!-- el atributo "input" siempre irá con un "label", si le ponemos un "id" en "label" tenemos que poner lo mismo. -->
+    <!-- si no le ponemos el enlace de "label" no reconoce que ese input pertenece en este caso al enlace NOMBRE -->
+
+    <form action="#" method="get">
+        <!-- se suele poner "#" para dejarlo vacío. -->
+        <!-- En action sería la petición a un enlace que tengamos en backend sería una URL, se le da "form get" en método en un get porque envío toda la información para una petición. -->
+        <!-- el "placeholder" sirve para decirle al usuario en el recuadro donde hay que poner la información o datos (Ej. Introduce aquí su nombre) -->
+        <!-- "id" es un identificador que utilizaremos nosotros (el id nunca se puede repetir) y  -->
+        <!-- "name" es el nombre que le damos a ese dato que vamos a enviar para que el Servidor lo reconozca.(el name sí se puede repetir) -->
+        <!-- "Input nombre" -->
+
+        <div class="inputBlock">
+            <!-- "class=" de momento se utilizarán en CSS y Javascript -->
+            <label for="nameInput"><b>Nombre (*)</b></label> <br> <!-- (con br le damos una nueva línea) -->
+            <!-- un input es una entrada de texto, password, email, número, imgaen, etc..,(hay varios tipos de input) en general aparecerá como una pequeña etiqueta o recuadro -->
+            <!-- siempre irá con la etiqueta "label" que será el dato que queramos que introduzcan. -->
+            <!-- "REQUIRED" poniéndolo en un input no hace falta ponerlo en todos ya que al GUARDAR si no se ha puesto nada en esa casilla no te dejará -->
+            <input required type="text" id="nameInput" name="username" maxlength="10" placeholder="Introduce tu nombre">
+            <!-- poniendo el atributo "required" se obliga a no saltarse ese campo -->
+            <!-- dento de input al final con "value" se puede rellenar lo que nosotros queramos que aparezca dentro del recuadro. -->
+            <!-- el atributo maxlength es para darle un máximo de carácteres. -->
+        </div><br>
+
+        <!-- "input apellidos" -->
+        <div class="inputBlock">
+            <label for="LastnameInput">Apellidos</label> <br> <!-- (con br le damos una nueva línea) -->
+            <input type="text" id="LastnameInput" name="Lastname" placeholder="Introduce tus apellidos">
+        </div><br>
+
+        <!-- "Input email"  -->
+        <div class="inputBlock">
+            <label for="emailInput"><b>Email</b></label> <br> <!-- (con br le damos una nueva línea) -->
+            <input type="email" id="emailInput" name="userEmail" placeholder="Introduce tu email">
+        </div><br>
+       
+        <!-- "Input contraseña" aquí veremos que las contraseñas no se verán -->
+        <div class="inputBlock">
+            <label for="passwordInput"><b>Contraseña</b></label> <br> <!-- (con br le damos una nueva línea) -->
+            <input type="password" id="passwordInput" name="passwordInput" maxlength="7" placeholder="*******">
+            <!-- "maxlength" limitar carácteres. -->
+        </div><br>
+        
+        <!-- Input para mensaje que será "textarea" -->
+        <!-- Otro tipo de "input" es "textarea" para crear un cuadro donde se pueda escribir en varias líneas -->
+        <!-- el "cols" y "rows" es el tamaño que le queramos dar -->
+        <div class="inputBlock">
+            <label for="messageInput">Mensaje</label> <br> <!-- (con br le damos una nueva línea) -->
+            <textarea name="messageInput" id="messageInput" cols="30" rows="10"></textarea>
+        </div><br>
+        <!-- Hay un atributo el "maxlength" para poder limitar la cantidad de carácteres para introducir en un input -->
+        <!-- Un desplegable para meter que se elija una opción con "option" -->
+        
+        <div class="inputBlock">
+            <label for="sexInput">Género</label><br>
+            <select name="sexInput" id="sexInput">
+            <!-- con "select" saldrá un deplegable. -->
+                <option value="" hidden></option>
+                <!-- con "hidden" oculta las opciones -->
+                <option value="female">Femenino</option>
+                <option value="male">Masculino</option>
+                <option value="other">Otro</option>
+            </select>
+                <!-- con "disabled" no deja seleccionar -->
+        </div>
+        <br><br>
+
+        <!-- "input TIPO NUMBER" para poner números -->
+        <div class="inputBolck">
+            <label for="ageInput">Edad</label>
+            <input type="number" name="ageInput" id="ageInput" value="40" min="0" max="120">
+
+            <!-- "input FECHAS" -->
+            <label for="birthdayInpt">Fecha de nacimiento</label>
+            <input type="date" name="birthdayInpt" id="birthdayInput">
+        </div>
 
         <br><br>
 
-        <table>
-            <thead>
-                <!-- Fila de celdas en la tabla -->
-                <tr>
-                    <!-- con th se describen qué van a ser esas columnas (lo pondrá en negrita por defecto). ej. -->
-                    <th>Nombre</th>
-                    <th>Email</th>
-                    <th>Edad</th>
-                </tr>
-            </thead>
+        <!-- CREAR LISTA DE DATOS con opciones al meter una letra -->
 
-            <tbody>
-                <tr>
-                    <!-- en los td se puede poner al principio un th para que podamos poner un identificador
-                    como por ejemplo númerico, sería:
-                    (<th>1</th>) -->
-                    <td>John Doe</td>
-                    <td>jdoe@gmail.com</td>
-                    <td></td>
-                </tr>
-                <!-- Tiene que coincidir los datos de la cabecera "th" con los del cuerpo "td"
-            Si queremos añadir otro nombre habrá que crear otro "tr" en el cuerpo "tbody" -->
-                <tr>
-                    <td>Jane Doe</td>
-                    <td>janedoe@gmail.com</td>
-                    <td>32</td>
-                </tr>
-                <tr>
-                    <td>Alumnos Codespace</td>
-                    <td>ac@codespaceacademy.com</td>
-                    <td>40</td>
-                </tr>
+        <div class="inputBlock">
+            <label for="carBrandInput">marca de tu coche</label>
+            <input type="text" id="carBrandInput" name="carBrand" list="carBrandList">
+            <!-- Para hacer una lista de datos y dar opciones para seleccionar (ayuda), Nota: no sale lista de opciones,
+            sino que al poner una letra aparecerá las opcines que hayamos introducido -->
+            <!-- En el "id" de datalist se le pone el mismo nombre que en "list" de input para asociarlo -->
+            <datalist id="carBrandList">
+                <option value="BMW">BMW</option>
+                <option value="MERCEDES">MERCEDES</option>
+                <option value="FORD">FORD</option>
+                <option value="VOLKSWAGEN">VOLKSWAGEN</option>
+                <option value="MUSTANG">MUSTANG</option>
+            </datalist>
+        </div>
+        <br><br>
 
-                <!-- "tr" es la FILA -->
-                <!-- "td" es la CELDA -->
-            </tbody>
-            <!-- Cuando la tabla es grande se puede poner un pie de página -->
-            <tfoot>
-                <tr>
-                    <th>Nombre</th>
-                    <th>Email</th>
-                    <th>Edad</th>
-                </tr>
-            </tfoot>
-
-        </table>
-
-        <br>
-        <hr><br>
-        <!-- FORMULARIOS / FORMS -->
-
-        <!-- el atributo "input" siempre irá con un "label", si le ponemos un "id" en "label" tenemos que poner lo mismo. -->
-        <!-- si no le ponemos el enlace de "label" no reconoce que ese input pertenece en este caso al enlace NOMBRE -->
-
-        <form action="" method="get">
-            <!-- En action sería la petición a un enlace que tengamos en backend sería una URL, se le da "form get" en método en un get porque envío toda la información para una petición. -->
-            <!-- el "placeholder" sirve para decirle al usuario en el recuadro donde hay que poner la información o datos -->
-            <!-- "id" es un identificador que utilizaremos nosotros (el id nunca se puede repetir) y  -->
-            <!-- "name" es el nombre que le damos a ese dato que vamos a enviar para que el Servidor lo reconozca.(el name sí se puede repetir) -->
-            <!-- "Input nombre" -->
+        <!-- Para CREAR UN CUADRO Y AGRUPAR UN CONJUNTO DE CAMPOS -->
+        <fieldset disabled>
+            <!-- "DISABLED" para desactivar los campos enteros, si lo ponemos en el "fieldset" desactivamos todos los campos -->
+            <!-- Para dar un título al bloque lo haremos con "legend" -->
+            <!-- Si quisiéramos desactivar los campos pondríamos "disabled" sería: "<fieldset disabled>" -->
+            <legend>Información de tu pareja</legend>
             <div class="inputBlock">
-                <!-- "class=" de momento se utilizarán en CSS y Javascript -->
-                <label for="nameInput"><b>Nombre (*)</b></label> <br> <!-- (con br le damos una nueva línea) -->
-                <!-- un input es una entrada de texto, password, email, número, imgaen, etc..,(hay varios tipos de input) en general aparecerá como una pequeña etiqueta o recuadro -->
-                <!-- siempre irá con la etiqueta "label" que será el dato que queramos que introduzcan. -->
-                <!-- REQUIRED poniéndolo en un input no hace falta ponerlo en todos ya que al GUARDAR si no se ha puesto nada en esa casilla no te dejará -->
-                <input required type="text" id="nameInput" name="username" maxlength="10" placeholder="Introduce tu nombre">
+                <label for="nameInput2"><b>Nombre (*)</b></label> <br> <!-- (con br le damos una nueva línea) -->
+                <input required type="text" id="nameInput2" name="username" placeholder="Introduce tu nombre">
                 <!-- poniendo el atributo "required" se obliga a no saltarse ese campo -->
-                <!-- dento de input al final con "value" se puede rellenar lo que nosotros queramos que aparezca dentro del recuadro. -->
-                <!-- el atributo maxlength es para darle un máximo de carácteres. -->
-            </div>
+            </div><br>
 
             <!-- "input apellidos" -->
             <div class="inputBlock">
-                <label for="LastnameInput"><b>Apellidos</b></label> <br> <!-- (con br le damos una nueva línea) -->
-                <input type="text" id="LastnameInput" name="Lastname" placeholder="Introduce tus apellidos">
+                <label for="LastnameInput2"><b>Apellidos</b></label> <br> <!-- (con br le damos una nueva línea) -->
+                <input type="text" id="LastnameInput2" name="Lastname" placeholder="Introduce tus apellidos">
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Estado civil</legend>
+            <div>
+                <!-- "radio" es un círculo que ponemos para seleccionar esa opción -->
+                <!-- Si ponemos un "input"  y después del "label" saldrá la palabra después del radio en este caso -->
+                <input type="radio" name="civilState" id="marriedInput">
+                <label for="marriedInput">Casado</label>
+            </div>
+            <!-- OJO!! no se cambia el "name" ya que sólo se puede enviar uno al servidor -->
+            <!-- se puede el mismo "name" para que sólo se pueda seleccionar uno con distintas opciones dentro de un dato -->
+            <div>
+                <input type="radio" name="civilState" id="singleInput">
+                <label for="singleInput">Soltero</label>
+            </div>
+            <!-- Si ponemos "checked" en el input al final selecciona una opción por defecto, se pone dentro del "Input" -->
+            <div>
+                <input type="radio" name="civilState" id="divorceInput" required>
+                <label for="divorceInput">Divorciado</label>
+            </div>
+        </fieldset>
+        <!-- Con "con Input type:"CHECKBOX" saldrá la opción en forma de casilla para seleccionar con una "v" -->
+        <fieldset>
+            <legend>Productos</legend>
+            <div>
+                <input type="checkbox" name="iphoneProduct" id="iphoneProduct">
+                <label for="iphoneProduct">Iphone</label>
             </div>
 
-            <!-- "Input email"  -->
-            <div class="inputBlock">
-                <label for="emailInput"><b>Email</b></label> <br> <!-- (con br le damos una nueva línea) -->
-                <input type="email" id="emailInput" name="userEmail" placeholder="Introduce tu email">
-            </div>
-            <!-- "Input contraseña" aquí veremos que las contraseñas no se verán -->
-            <div class="inputBlock">
-                <label for="passwordInput"><b>Contraseña</label> <br> <!-- (con br le damos una nueva línea) -->
-                <input type="password" id="passwordInput" name="passwordInput" maxlength="7" placeholder="*******">
-            </div>
-            <!-- Input para mensaje que será "textarea" -->
-            <!-- Otro tipo de "input" es "textarea" para crear un cuadro donde se pueda escribir en varias líneas -->
-            <!-- el cols y rows es el tamaño que le queramos dar -->
-            <div class="inputBlock">
-                <label for="messageInput"><b>Mensaje</b></label> <br> <!-- (con br le damos una nueva línea) -->
-                <textarea name="messageInput" id="messageInput" cols="30" rows="10"></textarea>
-            </div>
-            <!-- Hay un atributo el "maxlength" para poder limitar la cantidad de caracteres para introducir en un input -->
-            <!-- Un desplegable para meter que se elija una opción con "option" -->
-            <div class="inputBlock">
-                <label for="sexInput">Género</label><br>
-                <select name="sexInput" id="sexInput">
-                    <option value="" hidden></option>
-                    <!-- con "hidden" oculta las opciones -->
-                    <option value="female">Femenino</option>
-                    <option value="male">Masculino</option>
-                    <option value="other">Otro</option>
-                </select>
-                <!-- con "disabled" no deja seleccionar -->
-            </div>
-            <br><br>
-
-            <!-- "input TIPO NUMBER" para poner números -->
-            <div class="inputBolck">
-                <label for="ageInput">Edad</label>
-                <input type="number" name="ageInput" id="ageInput" value="40" min="0" max="120">
-                
-                <!-- "input FECHAS" -->
-                <label for="birthdayInpt">Fecha de nacimiento</label>
-                <input type="date" name="birthdayInpt" id="birthdayInput">
+            <div>
+                <input type="checkbox" name="MacbookProduct" id="MacbookProduct">
+                <label for="MacbookProduct">Macbook Pro</label>
             </div>
 
-            <br><br>
-            
-                <!-- CREAR LISTA DE DATOS con opciones al meter una letra -->
-            <div class="inputBlock">
-                <label for="carBrandInput">marca de tu coche</label>
-                <input type="text" id="carBrandInput" name="carBrand" list="carBrandList">
-                <!-- Para hacer una lista de datos y dar opciones para seleccionar (ayuda), Nota: no sale lista de opciones,
-                sino que al poner una letra aparecerá las opcines que hayamos introducido -->
-                <!-- En el "id" de datalist se le pone el mismo nombre que en "list" de input para asociarlo -->
-                <datalist id="carBrandList">
-                    <option value="BMW">BMW</option>
-                    <option value="MERCEDES">MERCEDES</option>
-                    <option value="FORD">FORD</option>
-                    <option value="VOLKSWAGEN">VOLKSWAGEN</option>
-                    <option value="MUSTANG">MUSTANG</option>
-                </datalist>
+            <div>
+                <input type="checkbox" name="AirpodsProduct" id="AirpodsProduct" required>
+                <label for="AirpodsProduct">Airpods</label>
             </div>
-            <br><br>
+        </fieldset>
 
-            <!-- Para CREAR UN CUADRO Y AGRUPAR UN CONJUNTO DE CAMPS -->
-            <fieldset disabled>
-                <!-- "DISABLED" para desactivar los campos enteros, si lo ponemos en el "fieldset" desactivamos todos los campos -->
-                <!-- Para dar un título al bloque lo haremos con "legend" -->
-                <!-- Si quisiéramos desactivar los campos pondríamos "disabled" sería: "<fieldset disabled>" -->
-                <legend>Información de tu pareja</legend>
-                <div class="inputBlock">
-                    <label for="nameInput2"><b>Nombre (*)</b></label> <br> <!-- (con br le damos una nueva línea) -->
-                    <input required type="text" id="nameInput2" name="username" placeholder="Introduce tu nombre">
-                    <!-- poniendo el atributo "required" se obliga a no saltarse ese campo -->
-                </div>
-
-                <!-- "input apellidos" -->
-                <div class="inputBlock">
-                    <label for="LastnameInput2"><b>Apellidos</b></label> <br> <!-- (con br le damos una nueva línea) -->
-                    <input type="text" id="LastnameInput2" name="Lastname" placeholder="Introduce tus apellidos">
-                </div>
-            </fieldset>
-
-            <fieldset>
-                <legend>Estado civil</legend>
-                <div>
-                    <!-- "radio" es un círculo que ponemos para seleccionar esa opción -->
-                    <!-- Si ponemos un "input"  y después del "label" saldrá la palabra después del radio en este caso -->
-                    <input type="radio" name="civilState" id="marriedInput">
-                    <label for="marriedInput">Casado</label>
-                </div>
-                <!-- OJO!! no se cambia el "name" ya que sólo se puede enviar uno al servidor -->
-                <!-- se puede el mismo "name" para que sólo se pueda seleccionar uno con distintas opciones dentro de un dato -->
-                <div>
-                    <input type="radio" name="civilState" id="singleInput">
-                    <label for="singleInput">Soltero</label>
-                </div>
-                <!-- Si ponemos "checked" en el input al final selecciona una opción por defecto, se pone dentro del "Input" -->
-                <div>
-                    <input type="radio" name="civilState" id="divorceInput" required>
-                    <label for="divorceInput">Divorciado</label>
-                </div>
-            </fieldset>
-            <!-- Con "con Input type:"CHECKBOX" saldrá la opción en forma de casilla para seleccionar con una "v" -->
-            <fieldset>
-                <legend>Productos</legend>
-                <div>
-                    <input type="checkbox" name="iphoneProduct" id="iphoneProduct">
-                    <label for="iphoneProduct">Iphone</label>
-                </div>
-
-                <div>
-                    <input type="checkbox" name="MacbookProduct" id="MacbookProduct">
-                    <label for="MacbookProduct">Macbook Pro</label>
-                </div>    
-
-                <div>
-                    <input type="checkbox" name="AirpodsProduct" id="AirpodsProduct" required>
-                    <label for="AirpodsProduct">Airpods</label>
-                </div>
-            </fieldset>
-
-            <label for="rangeInput">Seleccione cantidad de elementos</label>
-            <input type="range" name="rangeInput" id="rangeInput">
-
-            <br><br>
-
-            <!-- MEDIDORES (BARRAS) -->
-            <label for="fuelLevel">Cantidad de gasolina</label>
-            <meter min="0" max="100" id="fuelLevel" value="60"></meter>
-
-            <label for="progressInput">Progreso</label>
-            <progress max="100" value="33" id="progressInput"></progress>
-
-            <br><br>
-
-            <!-- Para subir un ARCHIVO O FOTO -->
-            <!-- si ponemos al final "value=test" te pone que hay que seleccionar un archivo .txt -->
-            <label for="fileInput">subir un archivo</label>
-            <input type="file" name="fileInput" id="fileInput">
-
-            <br><br>
-            <!-- "GUARDAR" FORMULARIO Y ENVIARLO
-
-            crear un botón para GUARDAR Y EJECUTAR la acción, llevará al atributo "action" que tendremos que poner
-            la URL don queramos enviarlo. -->
-            <!-- SE CREA SIEMPRE DENTRO DEL <form>  -->
-            <input type="submit" value="Guardar">
-
-            <!-- Con "RESET" abrimos un botón para resetear toda la información -->
-            <input type="reset" value="vaciar">
-            <!-- Para rellenar CAMPOS OBLIGATORIOS se pon un atributo después del input -->
-            
-        </form>
+        <!-- TIPO RANGO "lista max. y min.", se asocia con Java Script -->
+        <label for="rangeInput">Seleccione cantidad de elementos</label>
+        <input type="range" name="rangeInput" id="rangeInput">
 
         <br><br>
 
-        <!-- Multimedia / Media -->
+        <!-- MEDIDORES/METER (BARRAS) -->
+        <label for="fuelLevel">Cantidad de gasolina</label>
+        <meter min="0" max="100" id="fuelLevel" value="60"></meter>
 
-        <!-- Tened la imagen en la misma carpeta donde estemos realizando la programación o servidor, en este caso hemos creado una carpeta "imagenes" -->
-        <img src="imagenes/paisajemontaña.jpeg" width="500" alt="atardecer estrellada">
-
-        <!-- Se puede meter un enlace directamente por ejemplo desde youtube, si tuviéramos que poner un vídeo ajeno a youtube tendríamos que descargarlo -->
-        <!-- Podemos poner ancho y alto con "width" y "height" -->
-        <!-- el "iframe" es un contenido incrustrado, anidado. -->
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/OgIRAjnnJzI?controls=0"
-            title="YouTube video player" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen>
-        </iframe>
-
-        <iframe width="560" height="315" src="https://www.marca.com" frameborder="0"></iframe>
-
-        <!-- meter "PDF" con "iframe" al poner ancho y alto debemos de poner "px" ej.- "500px"-->
-        <iframe
-            src="http://www.juntadeandalucia.es/empleo/recursos/material_didactico/especialidades/materialdidactico_tic_linux_basico/manuales/tema1.pdf"
-            width="500px" height="500px" frameborder="0"></iframe>
-
-        <!-- Hay otro elemento que es "object" es un recurso externo, puede ser un plugin que no requiera algo visual como el "iframe" -->
-        <!-- si tiene sentido lo incrusta y si no, lo procesará o ejecutará sin incrustarlo.
-        sería como date y en "type" le pondremos "aplication/ y el archivo correspondiente eje. /pdf" -->
-        <!-- *No es muy común porque al poner un plugin lo haremos con otro elemento. -->
-        <object
-            data="http://www.juntadeandalucia.es/empleo/recursos/material_didactico/especialidades/materialdidactico_tic_linux_basico/manuales/tema1.pdf"
-            type="aplication/pdf">
-        </object>
+        <label for="progressInput">Progreso</label>
+        <progress max="100" value="33" id="progressInput"></progress>
 
         <br><br>
-        <!-- PONER UN "BOTÓN" -->
-        <BUtton>Click</BUtton>
 
-        <!-- CITAS / QUOLATIONS - citar algún tipo de texto -->
-        <h3>Citas / Quolations</h3>
-                 
-        <!--REPASO: creamos un ej. lorem150 para introducir un texto y para igualar botón drcho. del ratón y le damos Format text -->
-        <blockquote>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur, expedita odio. Officia, est iste soluta
+        <!-- Para subir un ARCHIVO O FOTO -->
+        <!-- si ponemos al final "value=test" te pone que hay que seleccionar un archivo .txt -->
+        <label for="fileInput">subir un archivo</label>
+        <input type="file" name="fileInput" id="fileInput">
+
+        <br><br>
+
+        <!-- "GUARDAR" FORMULARIO Y ENVIARLO
+
+        crear un botón para GUARDAR Y EJECUTAR la acción, llevará al atributo "action" que tendremos que poner
+        la URL don queramos enviarlo. -->
+        <!-- SE CREA SIEMPRE DENTRO DEL <form>  -->
+        <input type="submit" value="Guardar">
+
+        <!-- Con "RESET" abrimos un botón para resetear toda la información -->
+        <input type="reset" value="vaciar">
+        <!-- Para rellenar CAMPOS OBLIGATORIOS se pone un atributo después del input -->
+
+    </form>
+
+    <br><br>
+
+    <!-- Multimedia / Media -->
+
+    <!-- Tened la imagen en la misma carpeta donde estemos realizando la programación o servidor, en este caso hemos creado una carpeta "imagenes" -->
+    <!-- "src" es source o fuente, es donde queremos abrir para introducir una imagen -->
+    <img src="imagenes/paisajemontaña.jpeg" width="500" alt="atardecer estrellada">
+    <!-- El atributo "alt" es un texto alternativo que aparecerá cuando cae la ruta y no aparace la imagen. -->
+    <!-- Podemos poner ancho y alto con "width" y "height", NOTA: SI PONEMOS SÓLO EL "WIDTH" LA FOTO QUEDARÁ PROPORCIONADA -->
+
+                <!-- SESIÓN 20 -->
+    <br>
+    <!-- Se puede meter un enlace directamente por ejemplo desde youtube, si tuviéramos que poner un vídeo ajeno a youtube tendríamos que descargarlo -->
+    <!-- el "iframe" es un contenido incrustrado, anidado. -->
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/OgIRAjnnJzI?controls=0"
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+    </iframe>
+    <br>
+    <iframe width="560" height="315" src="https://www.marca.com" frameborder="0"></iframe>
+
+    <!-- meter "PDF" con "iframe" al poner ancho y alto debemos de poner "px" ej.- "500px"-->
+    <iframe src="http://www.juntadeandalucia.es/empleo/recursos/material_didactico/especialidades/materialdidactico_tic_linux_basico/manuales/tema1.pdf" width="500px" height="500px" frameborder="0"></iframe>
+
+    <!-- Hay otro elemento que es "object" es un recurso externo, puede ser un plugin que no requiera algo visual como el "iframe" -->
+    <!-- si tiene sentido lo incrusta y si no, lo procesará o ejecutará sin incrustarlo. En youtube para incustrar el vídeo tiene que aparacer
+        con la palabra /embed/.
+        sería como "data" y en "type" le pondremos "application/ y el archivo correspondiente, ej.: application/pdf" -->
+    <!-- *No es muy común porque al poner un plugin lo haremos con otro elemento. -->
+    <object data="http://www.juntadeandalucia.es/empleo/recursos/material_didactico/especialidades/materialdidactico_tic_linux_basico/manuales/tema1.pdf" type="application/pdf"></object>
+
+    <br><br>
+    <!-- PONER UN "BOTÓN" -->
+    <BUtton>Click</BUtton>
+
+    <!-- CITAS / QUOLATIONS - citar algún tipo de texto -->
+    <h3>Citas / Quolations</h3>
+
+    <!--REPASO: creamos un ej. lorem150 para introducir un texto y para igualar botón drcho. del ratón y le damos Format text -->
+    <blockquote>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur, expedita odio. Officia, est iste
+        soluta
         facere qui unde nulla sapiente omnis placeat vitae dolor adipisci corrupti eum facilis voluptatibus corporis
         consequatur eligendi veritatis error dolore nisi. Sunt reprehenderit ex odit maiores, eveniet tempore quis
-        excepturi quisquam minus soluta incidunt fugiat itaque, non quod! Fugit dolorem quidem dicta adipisci corporis
-        iste? Ex dolor dolorum obcaecati magnam! Molestiae impedit fugiat culpa cumque maxime sapiente non corporis ex
-        eveniet aut reiciendis consequuntur ea facilis accusantium soluta officiis quibusdam, vitae numquam sed iusto ab
-        voluptates. Explicabo, omnis. Dolor unde exercitationem, saepe facere tempore assumenda eos perferendis dolores
+        excepturi quisquam minus soluta incidunt fugiat itaque, non quod! Fugit dolorem quidem dicta adipisci
+        corporis
+        iste? Ex dolor dolorum obcaecati magnam! Molestiae impedit fugiat culpa cumque maxime sapiente non corporis
+        ex
+        eveniet aut reiciendis consequuntur ea facilis accusantium soluta officiis quibusdam, vitae numquam sed
+        iusto ab
+        voluptates. Explicabo, omnis. Dolor unde exercitationem, saepe facere tempore assumenda eos perferendis
+        dolores
         quae magnam ducimus? Vitae, exercitationem. Necessitatibus obcaecati dignissimos, architecto quas maiores
-        mollitia ex impedit quod consequuntur quasi culpa nihil suscipit exercitationem nostrum, aliquam id laboriosam
+        mollitia ex impedit quod consequuntur quasi culpa nihil suscipit exercitationem nostrum, aliquam id
+        laboriosam
         dolore, vel est fugiat! Impedit, sit similique. Impedit in praesentium sapiente adipisci quas deleniti vero
         expedita, nostrum modi! Quae voluptatum quia dolor.
-        </blockquote>
+    </blockquote>
 
-        <!-- En el caso de citas / quo de texto más corto no como en bloque  -->
-        <!-- NOTA: saldrá el texto entre comillas. -->
-        <q>Soy programador</q>
-        <br><br>
-        <!-- Si a continuación del "q" ponemos el elemento "abbr" podremos poner una abreviatura en el cual al poner el ratón encima saldrá el texto 
-        que significa dicha abreviatura -->
-        <q>Soy programador. <abbr title="Formació profesinal">FP</abbr></q>
+    <!-- En el caso de citas / quo de texto más corto no como en bloque  -->
+    <!-- NOTA: saldrá el texto entre comillas. -->
+    <q>Soy programador</q>
+    <br><br>
+    <!-- Si a continuación del "q" ponemos el elemento "abbr" podremos poner una abreviatura en el cual al poner el ratón encima saldrá el texto 
+    que significa dicha abreviatura -->
+    <q>Soy programador. <abbr title="Formación profesinal">FP</abbr></q>
+    <abbr title="World Wide Web">www</abbr>
+    
+    <br><br>
+    <!-- Para poner un botón en cualquier apartado, siempre tiene que estar dentro de la etiqueta "form"
+     -->
+    <button>click</button>
 
-        <br><br>
-        <!-- Para poner un botón en cualquier apartado -->
-        <button>click</button>
+    <br><br><br>
 
-
-
-
-        <br><br><br>
-
-        <!-- Para meter un texto de forma rápida en una etiqueta: -->
-        <!-- Seleccionamos con todo incluído, presionamos la tecla F1, ponemos >wrap,
-        y en la barra escribimos el elemento o etiqueta que queramos. -->
+    <!-- Para meter un texto de forma rápida en una etiqueta: -->
+    <!-- Seleccionamos con todo incluído, presionamos la tecla F1, ponemos >wrap,
+    y en la barra escribimos el elemento o etiqueta que queramos. -->
 
         <!-- SCRIPTING -->
 
-        <!-- ES ETIQUETA JAVASCRIPT siempre estará dentro del "body" y abajo del todo -->
-        <!-- para que coja la página entera sino nos saldría que no existe -->
-        <!-- utilazaremos el "script src" para poner un enlace de archivo JAVASCRIPT -->
-        <script>document.write("Escribiendo esto desde JS.")</script>
-        
-        <!-- Si el navegador donde estamos funciona solo con Javascript en el caso de no navegar, con
-        "noscript" nos AVISA que podemos tener problemas en esa página, se le puede poner un texto. -->
-        <noscript>Error. Tu navegador no soporta Javascript</noscript>
+    <!-- ES ETIQUETA JAVASCRIPT siempre estará dentro del "body" y abajo del todo,
+         para que coja la página entera, si no, al ponerlo al principio al no reconocerlo, nos saldría que no existe -->
+    <!-- utilazaremos el "script src" para poner un enlace de archivo JAVASCRIPT -->
+    <script>document.write("Escribiendo esto desde JS.")</script>
 
-        <!-- Si desactivamos Javascript en nuestro navegador en about:config saldrá el mensaje que hayamos puesto -->
-        <!-- en "noscript" -->
+    <!-- Si el navegador donde estamos funciona solo con Javascript en el caso de no navegar, con
+    "noscript" nos AVISA que podemos tener problemas en esa página, se le puede poner un texto. -->
+    <noscript>Error. Tu navegador no soporta Javascript</noscript>
 
-        <br><br>
+    <!-- Si desactivamos Javascript en nuestro navegador en about:config saldrá el mensaje que hayamos puesto -->
+    <!-- en "noscript" -->
 
-        <!-- PARA PONER ESPACIOS ENTRE carácteres
-        REPRESENTACIÓN DE carácteres "&.."-->
-        a&nbsp;&nbsp; &#62;b
-        
-        <br>
-        <!-- Para poner un carácter en texto y no crear conflicto en el programa HTML se crea con la etiqueta "&" -->
-        a&nbsp;&nbsp; &#60;!-- Scripting --&#62;
-        
-        OTRO CARÁCTER MUY COMÚN el típico C de copyright
-        &copy;
+    <br><br>
+
+    <!-- PARA PONER ESPACIOS ENTRE carácteres
+    REPRESENTACIÓN DE carácteres "&.."-->
+    a&nbsp;&nbsp; &#62;b
+
+    <br>
+    <!-- Para poner un carácter en texto y no crear conflicto en el programa HTML se crea con la etiqueta "&"
+    (UNICODE) representación de carácteres ej.:&nbsp sería un espacio -->
+    
+    a&nbsp;&nbsp; &#60;!-- Scripting --&#62;
+    <br><br>
+    OTRO CARÁCTER MUY COMÚN el típico C de copyright
+    &copy;
 
 </body>
 
